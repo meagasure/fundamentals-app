@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     
     @IBAction func secondPress(_ sender: Any) {
         tapCount = tapCount + 1
-        if tapCount >= 10 {
-            greetingLabel.text = "You tapped the button 10 times!"
+        if tapCount >= 5 {
+            greetingLabel.text = "You tapped the button 5 times!"
         }
     }
     override func viewDidLoad() {
