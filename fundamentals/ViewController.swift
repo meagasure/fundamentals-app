@@ -18,12 +18,27 @@ class ViewController: UIViewController {
         greetingLabel.text = "Isn't this great?!"
     }
     
+    @IBOutlet weak var input_1: UITextField!
+    
+    @IBOutlet weak var input_2: UITextField!
+    
     @IBAction func secondPress(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 5 {
-            greetingLabel.text = "You tapped the button 5 times!"
-        }
+//        tapCount = tapCount + 1
+//        if tapCount >= 5 {
+//            greetingLabel.text = "You tapped the button 5 times!"
+//        }
+        
+        //output is currently strings
+        print(input_1.text!)
+        print(input_2.text!)
+        
+        //Long way
+        greetingLabel.text = String(Double(input_1.text!)! + Double(input_2.text!)!)
+        
+        //Shorter way
+         greetingLabel.text = "Answer: \(Double(input_1.text!)! + Double(input_2.text!)!)"
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
